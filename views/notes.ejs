@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>oreo- NOtes</title>
+
+<link rel="shortcut icon" href="<%process.cwd()%>/assets/img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="<%process.cwd()%>/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="<%process.cwd()%>/css/feather.css">
+
+<link rel="stylesheet" href="<%process.cwd()%>/css/flags.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="<%process.cwd()%>/css/all.min.css">
+
+<link rel="stylesheet" href="<%process.cwd()%>/css/datatables.min.css">
+
+<link rel="stylesheet" href="<%process.cwd()%>/css/style.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+
+<div class="header">
+
+<div class="header-left">
+<a href="index.html" class="logo">
+<img src="<%process.cwd()%>/images/cnc.jpg" alt="Logo">
+</a>
+<a href="index.html" class="logo logo-small">
+<img src="<%process.cwd()%>/images/cnc.jpg" alt="Logo" width="30" height="30">
+</a>
+</div>
+
+<div class="menu-toggle">
+<a href="javascript:void(0);" id="toggle_btn">
+<i class="fas fa-bars"></i>
+</a>
+</div>
+
+<div class="top-nav-search">
+<form>
+<input type="text" class="form-control" placeholder="Search here">
+<button class="btn" type="submit"><i class="fas fa-search"></i></button>
+</form>
+</div>
+
+
+<a class="mobile_btn" id="mobile_btn">
+<i class="fas fa-bars"></i>
+</a>
+
+
+<ul class="nav user-menu">
+<li class="nav-item dropdown language-drop me-2">
+<a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
+<img src="<%process.cwd()%>/images/header-icon-01.svg" alt>
+</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="javascript:;"><i class="flag flag-lr me-2"></i>English</a>
+<a class="dropdown-item" href="javascript:;"><i class="flag flag-bl me-2"></i>Francais</a>
+<a class="dropdown-item" href="javascript:;"><i class="flag flag-cn me-2"></i>Turkce</a>
+</div>
+</li>
+
+<li class="nav-item dropdown noti-dropdown me-2">
+<a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
+<img src="<%process.cwd()%>/images/header-icon-05.svg" alt>
+</a>
+<div class="dropdown-menu notifications">
+<div class="topnav-dropdown-header">
+<span class="notification-title">Notifications</span>
+<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+</div>
+<div class="noti-content">
+<ul class="notification-list">
+<li class="notification-message">
+<a href="#">
+<div class="media d-flex">
+<span class="avatar avatar-sm flex-shrink-0">
+<img class="avatar-img rounded-circle" alt="User Image" src="<%process.cwd()%>/images/avatar-02.jpg">
+</span>
+<div class="media-body flex-grow-1">
+<p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
+<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+</div>
+</div>
+</a>
+</li>
+<li class="notification-message">
+<a href="#">
+<div class="media d-flex">
+<span class="avatar avatar-sm flex-shrink-0">
+<img class="avatar-img rounded-circle" alt="User Image" src="<%process.cwd()%>/images/avatar-11.jpg">
+</span>
+<div class="media-body flex-grow-1">
+<p class="noti-details"><span class="noti-title">International Software Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
+<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+</div>
+</div>
+</a>
+</li>
+<li class="notification-message">
+<a href="#">
+<div class="media d-flex">
+<span class="avatar avatar-sm flex-shrink-0">
+<img class="avatar-img rounded-circle" alt="User Image" src="<%process.cwd()%>/images/avatar-17.jpg">
+</span>
+<div class="media-body flex-grow-1">
+<p class="noti-details"><span class="noti-title">John Hendry</span> sent a cancellation request <span class="noti-title">Apple iPhone XR</span></p>
+<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+</div>
+</div>
+</a>
+</li>
+<li class="notification-message">
+<a href="#">
+<div class="media d-flex">
+<span class="avatar avatar-sm flex-shrink-0">
+<img class="avatar-img rounded-circle" alt="User Image" src="<%process.cwd()%>/images/avatar-13.jpg">
+</span>
+<div class="media-body flex-grow-1">
+<p class="noti-details"><span class="noti-title">Mercury Software Inc</span> added a new product <span class="noti-title">Apple MacBook Pro</span></p>
+<p class="noti-time"><span class="notification-time">12 mins ago</span></p>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="topnav-dropdown-footer">
+<a href="#">View all Notifications</a>
+</div>
+</div>
+</li>
+
+<li class="nav-item zoom-screen me-2">
+<a href="#" class="nav-link header-nav-list">
+<img src="<%process.cwd()%>/images/header-icon-04.svg" alt>
+</a>
+</li>
+
+<li class="nav-item dropdown has-arrow new-user-menus">
+<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+<span class="user-img">
+    <img class="rounded-circle" src="<%process.cwd()%>/images/default.png" width="31"
+    alt="<%=user.FirstName%>">
+<div class="user-text">
+<h6> <%=user.FirstName%></h6>
+<p class="text-muted mb-0"><%=user.Role%></p>
+</div>
+</span>
+</a>
+<div class="dropdown-menu">
+<div class="user-header">
+<div class="avatar avatar-sm">
+<img src="<%process.cwd()%>/images/default.png" alt="User Image" class="avatar-img rounded-circle">
+</div>
+<div class="user-text">
+<h6> <%=user.FirstName%></h6>
+<p class="text-muted mb-0"><%=user.Role%></p>
+</div>
+</div>
+
+<a class="dropdown-item" href="/auth/logout">Logout</a>
+</div>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="sidebar" id="sidebar">
+<div class="sidebar-inner slimscroll">
+<div id="sidebar-menu" class="sidebar-menu">
+<ul>
+    <li class="menu-title">
+        <span>Main Menu</span>
+    </li>
+    <li class="submenu active">
+        <a href="#"><i class="feather-grid"></i> <span> Dashboard</span> <span
+                class="menu-arrow"></span></a>
+        <ul>
+
+            <li><a href="#" class="active">Teacher Dashboard</a></li>
+
+        </ul>
+    </li>
+    <li class="submenu">
+        <a href="#"><i class="fas fa-graduation-cap"></i> <span> Students</span> <span
+                class="menu-arrow"></span></a>
+        <ul>
+            <li><a href="#">Student List</a></li>
+           
+        </ul>
+    </li>
+    <li class="submenu">
+        <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span
+                class="menu-arrow"></span></a>
+        <ul>
+    
+            <li><a href="#">stud att</a></li>
+
+        </ul>
+    </li>
+    <li class="submenu">
+        <a href="#"><i class="fas fa-building"></i> <span> Materials</span> <span
+                class="menu-arrow"></span></a>
+        <ul>
+            <li><a href="#">NOTES</a></li>
+        </ul>
+    </li>
+    <li class="submenu">
+        <a href="#"><i class="fas fa-book-reader"></i> <span> ASSIGNMENTS</span> <span
+                class="menu-arrow"></span></a>
+        <ul>
+            <li><a href="#">ASSG UPLOAD</a></li>
+
+        </ul>
+    </li>
+
+    </li>
+
+
+    </li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div class="page-wrapper">
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row">
+<div class="col">
+<h3 class="page-title">NOTES</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+<li class="breadcrumb-item active">notes</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-lg-12 col-xl-8">
+        <div class="row">
+            <div class="col-12 col-lg-8 col-xl-8 d-flex">
+                <div class="card flex-fill comman-shadow">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h5 class="card-title">Notes upload</h5>
+                            </div>
+                            <div class="col-6">
+                                <span class="float-end view-link"><a href="#">View All Notes</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="col-12 col-lg-12 col-xl-12 d-flex">
+                        <div class="card flex-fill comman-shadow">
+                          <div class="card-header d-flex align-items-center">
+                            <style>
+                                select {
+                                  width: 100%;
+                                  height: 30px;
+                                  border: 1px solid black;
+                                  border-radius: 5px;
+                                }
+              
+                                select option {
+                                  padding: 5px;
+                                }
+                              </style>
+                              <select id="Department">
+                                <option value="bca">BCA</option>
+                                <option value="bba">BBA</option>
+                                <option value="tax">TAX</option>
+                              </select>
+                              <select id="Semester">
+                                <option value="sem1">SEM 1</option>
+                                <option value="sem2">SEM 2</option>
+                                <option value="sem3">SEM 3</option>
+                                <option value="sem4">SEM 4</option>
+                                <option value="sem4">SEM 5</option>
+                                <option value="sem6">SEM 6</option>
+                              </select>
+              
+                            <style>
+                                table {
+                                  border-collapse: collapse;
+                                  width: 100%;
+                                }
+                            
+                                th, td {
+                                  border: 1px solid black;
+                                  padding: 8px;
+                                  text-align: left;
+                                }
+                            
+                                #submit-btn {
+                                  float: right;
+                                  margin-top: 10px;
+                                }
+                              </style>
+                            
+                            <body>
+                              <table id="noteTable">
+                                <thead>
+                                  <tr>
+                                    <th>Sl. No.</th>
+                                    <th>Class</th>
+                                    
+                                    <th>Subject</th>
+                                    <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>3rd sem</td>
+                                    
+                                    <td>HTML</td>
+                                    <td> <body>
+                                        <form action="/upload" method="post" enctype="multipart/form-data">
+                                          <input type="file" name="Attendance" required accept=".pdf">
+                                          <button type="submit">upload</button>
+                                        </form>
+                
+                                      </body></td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>3rd sem</td>
+                                   
+                                    <td>JAVASCRIPT</td>
+                                    <td> <body>
+                                        <form action="/upload" method="post" enctype="multipart/form-data">
+                                          <input type="file" name="Attendance" required accept=".pdf">
+                                          <button type="submit">upload</button>
+                                        </form>
+                
+                                      </body></td>
+                                  </tr>
+                                  <!-- Add more rows for additional assignments and students as needed -->
+                                </tbody>
+                              </table>
+                            
+                              
+                            </body>
+                            </html>
+      
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<script src="<%process.cwd()%>/js/jquery-3.6.0.min.js"></script>
+
+<script src="<%process.cwd()%>/js/bootstrap.bundle.min.js"></script>
+
+<script src="<%process.cwd()%>/js/feather.min.js"></script>
+
+<script src="<%process.cwd()%>/js/jquery.slimscroll.min.js"></script>
+
+<script src="<%process.cwd()%>/js/script.js"></script>
+</body>
+</html>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+    const Department  = document.getElementById('Department');
+    const Semester = document.getElementById('Semester');
+    const Table = document.getElementById('noteTable');
+    Department.addEventListener('change',(e) => {
+      if(Semester.value == 'sem3' && Department.value == 'bca'){
+        Table.style.display = "block";
+      }else{
+        Table.style.display = "none";
+      }
+    })
+    Semester.addEventListener('change',(e) => {
+      if(Semester.value == 'sem3' && Department.value == 'bca'){
+        Table.style.display = "block";
+      }else{
+        Table.style.display = "none";
+      }
+    })
+  </script>
+
+</body>
+</html>
